@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Proyecyo How To Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar-nav navbar-expand-sm navbar-dark bg-dark  justify-content-between rounded" style="background-color: #e3f2fd;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample" aria-controls="navbarsExample" aria-expanded="true" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+        <div class="collapse navbar-collapse justify-content-start" id="navbarsExample">
+            <ul class="nav navbar-nav" id="myTab" role="tablist">
+                <li class="nav-item active">
+                    <a class="nav-link " id="home-tab" data-toggle="tab" href="#Home" role="tab" aria-controls="home" aria-selected="true">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="table-tab" data-toggle="tab" href="#Table" role="tab" aria-controls="tabla" aria-selected="false">Noticias</a>
+                </li>
+                <li class="nav-item dropdown" id="service-tab">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownEx" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Acerca de</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownEx">
+                        <a class="dropdown-item" href="#Maps" data-toggle="tab">Opcional</a>
+                        <a class="dropdown-item" href="#Anotaciones" data-toggle="tab">Sobre nosotros</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        
+        <input value = "Registrarse" class = "btn btn-primary" type = "button" onclick = "javascript:window.location='/php-login/signup.php'">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input value = "Iniciar Sesion" class = "btn btn-primary" type = "button" onclick = "javascript:window.location='/php-login/login.php'">
+
+        
+    </nav>
+
+
+    <div class="tab-content" id="myTabConent">
+        <div class="tab-pane fade show active" id="Home" role="tabpanel" aria-labelledby="home-tab">
+            <form action="" id="productoForm" title="Insertar Producto">
+                <div class="row">
+                    <div class="form-grup col-sm-6">
+                        <label for="producto" class="h3">How To Web</label>
+                        <br>
+                        <br>
+                        <br>
+                        <label for="descProducto" class="h4">Noticias del día</label>
+                        <br>
+                        <div class="media">
+                            <div class="media-bottom">
+                                <img src="resources/twitch.jpg" class="media-object" style="width:200x">
+                                <h4 class="media-heading">Nuevas formas de pago <small><i>miércoles, 27 de abril de 2022</i></small>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="media">
+                            <div class="media-bottom">
+                                <img src="resources/Netflix.jpg" class="media-object" style="width:500px">
+                                <h4 class="media-heading">Las acciones de Netflix cayeron 8% en la semana <small><i>viernes, 23 de abril de 2021</i></small></h4>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="media">
+                            <div class="media-bottom">
+                                <img src="resources/spotify.jpg" class="media-object" style="width:500px">
+                                <h4 class="media-heading">Reformas tras el boicot  <small><i>lunes, 31 de enero de 2022</i></small></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="tab-pane fade" id="Table" role="tabpanel" aria-labelledby="table-tab">
+
+            <div class="table-responsive">
+                <table class="table table-dark table-striped" id="dataTable">
+                    
+                    
+                </table>
+
+                <div class="media">
+                    <div class="media-bottom">
+                        <img src="resources/spotify.jpg" class="media-object" style="width:500px">
+                        <h4 class="media-heading">Reformas tras el boicot  <small><i>lunes, 31 de enero de 2022</i></small></h4>
+                    </div>
+                </div>
+                <input type="text" class="form-control" id="costo" placeholder="Comentario" required>
+                <button type='button' onclick='submitFormUpdate(${data[x].idProducto});' class='btn btn-info'>Actualizar</td>
+                <button type='button' onclick='submitFormDelete(${data[x].idProducto});' class='btn btn-danger'>Eliminar</td>
+
+                
+            </div>
+        </div>
+
+        <div id="Maps" style="width: 98%; height: 550px;" class="tab-pane fade">
+            <div id="map" style="width: 97%; height: 550px;">Map</div>
+        </div>
+        <div id="Anotaciones" class="tab-pane fade">
+            <h2>Anotaciones</h2>
+            <div class="media">
+                <div class="media-left">
+                    <img src="resources/Netflix.jpg" class="media-object" style="width:45px">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Netflix <small><i>Posted on February 19, 2018</i></small></h4>
+                    <p>
+                        I like Batman!!!.
+                    </p>
+                    <!-- Nested media object -->
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="resources/twitch.jpg" class="media-object" style="width:1000px">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Capitan América <small><i>Posted on February 19, 2018</i></small>
+                            </h4>
+                            <p>Nop, is better Superman.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3zQkTX_la0nl6ZD-EnIQzKCt5g5sfW08" async defer></script>
+<script src="js/producto.js"></script>
+
+
+
+</html>
